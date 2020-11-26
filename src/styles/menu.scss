@@ -1,0 +1,117 @@
+.menu {
+  padding: 67px 0 75px;
+
+  &__title {
+    text-align: center;
+    height: 52px;
+    font-family: "Banny", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media(max-width: 750px) {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      left: calc(50% - 27px);
+      top: 10px;
+      display: block;
+      width: 54px;
+      height: 3px;
+      border: 1px solid transparent;
+      background: $accent-color;
+      border-radius: 46px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 auto 47px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    max-width: 526px;
+    height: 71px;
+    font-size: 17px;
+    line-height: 26px;
+
+    @media(max-width: 750px) {
+      font-size: 12px;
+      max-width: 350px;
+    }
+  }
+
+  &__items {
+    margin: 0 auto 48px;
+    display: flex;
+    width: 783px;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 17px;
+
+    @media(max-width: 750px) {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    width: 112px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+    text-transform: uppercase;
+    border-left: 1px solid rgba(51, 51, 51, 0.2);
+    transition: background-color 0.5s;
+
+    &:first-child {
+      border-left: transparent;
+    }
+
+    &:hover {
+      background: rgba(42, 42, 42, 0.2);
+    }
+  }
+
+  &__meals {
+    display: grid;
+    grid-template-columns: repeat(3, 338px);
+    grid-template-rows: repeat(7, 60px);
+    justify-content: center;
+    column-gap: 60px;
+
+    @media(max-width: 1150px) {
+      grid-template-columns: repeat(2, 338px);
+      grid-template-rows: repeat(11, 60px);
+    }
+
+    @media(max-width: 750px) {
+      grid-template-columns: 338px;
+      grid-template-rows: repeat(21, 60px);
+    }
+  }
+
+  &__meal {
+    width: 338px;
+  }
+
+  &__meal-title {
+    display: flex;
+    font-family: "Banny", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  &__meal-description {
+    font-size: 11px;
+    opacity: 0.5;
+  }
+
+  &__meal-price {
+    display: block;
+    margin-left: 10px;
+    text-align: right;
+  }
+}

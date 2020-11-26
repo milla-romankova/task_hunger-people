@@ -1,0 +1,45 @@
+.logo {
+  position: absolute;
+  left: calc(50% - 70px);
+  top: 23px;
+  z-index: 2;
+
+  width: 140px;
+  height: 140px;
+
+  background-image: url(../images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 160px;
+    left: 70px;
+    display: block;
+    width: 1px;
+    height: 432px;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    @media(max-width: 1150px) {
+      display: none;
+    }
+  }
+
+  @media(max-width: 1150px) {
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+  }
+
+  @media(max-width: 1150px) {
+    top: 5px;
+  }
+
+  @media(max-width: 750px) {
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+  }
+}

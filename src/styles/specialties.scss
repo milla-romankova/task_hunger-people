@@ -1,0 +1,133 @@
+.specialties {
+  background-image: url(../images/events.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  @media(max-width: 900px) {
+    background-image: url(../images/specialties.png);
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 93px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: -40px;
+  }
+
+  &__card {
+    display: flex;
+    padding: 0 5vw;
+
+    @media(max-width: 1000px) {
+      padding: 0 3vw;
+    }
+
+    @media(max-width: 750px) {
+      flex-direction: column;
+      padding: 0 5vw;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50px;
+      top: 115px;
+      display: block;
+      width: 210px;
+      height: 210px;
+      border: 19px solid $accent-color;
+      box-sizing: border-box;
+      filter: drop-shadow(0 0 93px rgba(0, 0, 0, 0.5));
+      border-radius: 5px;
+
+      @media(max-width: 1000px) {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 0 5vw 0 9vw;
+    width: 442px;
+    height: 442px;
+    filter: drop-shadow(0 0 46.59px #000);
+    border-radius: 5px;
+
+    @media(max-width: 1000px) {
+      margin: 0;
+    }
+
+    @media(max-width: 750px) {
+      height: 350px;
+      width: 350px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-title {
+    font-family: "Banny", sans-serif;
+    font-size: 34px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @media(max-width: 1000px) {
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      left: calc(50% - 27px);
+      top: 15px;
+      display: block;
+      width: 54px;
+      height: 3px;
+      border: 1px solid transparent;
+      background: $accent-color;
+      border-radius: 46px;
+    }
+  }
+
+  &__card-subtitle {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.9);
+
+    @media(max-width: 1000px) {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__card-text {
+    font-size: 13px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.9);
+
+    @media(max-width: 750px) {
+      margin-bottom: 30px;
+    }
+  }
+}

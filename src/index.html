@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="./styles/main.scss">
+    <script src="https://kit.fontawesome.com/52c4a6df27.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="header__nav nav">
+        <ul class="nav__list nav__list--left">
+          <li class="nav__item">
+            <a class="nav__link" href="#header">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#booking">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#events">Team</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#booking">Booking</a>
+          </li>
+        </ul>
+
+        <div class="logo"></div>
+
+        <ul class="nav__list nav__list--right">
+          <li class="nav__item">
+            <a class="nav__link" href="#menu">Menu</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#specialties">Galerie</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#events">Events</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__timer">
+        <div id="countdown" class="countdown">
+          <div class="time">
+            <h2 id="days" hidden></h2>
+            <h3>
+              left: <span id="hours">00</span>:<span id="minutes">00</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__main">
+        <div class="header__timetable">
+          <p>Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</p>
+        </div>
+
+        <div class="header__middle">
+          <h2 class="header__subtitle">Restaurant</h2>
+          <h1 class="header__title">hungry people</h1>
+
+          <div class="header__buttons">
+            <a class="header__button button" href="#booking">Book Table</a>
+            <a
+              class="header__button button button--transparent"
+              href="#specialties"
+            >
+              Explore
+            </a>
+          </div>
+
+          <a class="header__down" href="#menu">
+            <span class="fas fa-chevron-down header__button-down"></span>
+          </a>
+        </div>
+
+        <div class="header__networks">
+          <a class="header__network" href="https://www.facebook.com/"><p class="fab fa-facebook-f"></p></a>
+          <a class="header__network" href="https://www.twitter.com/"><p class="fab fa-twitter"></p></a>
+          <a class="header__network" href="https://www.instagram.com/"><p class="fab fa-instagram-square"></p></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="booking" id="booking">
+        <div class="booking__top">
+          <div>
+            <h2 class="booking__title">Book a table</h2>
+
+            <form
+              class="booking__form"
+              method="GET"
+            >
+              <div class="booking__inputs">
+                <div>
+                  <label for="name">
+                    <input
+                      class="booking__input"
+                      type="text"
+                      placeholder="name"
+                      id="name"
+                      name="name"
+                      maxlength="20"
+                      autocomplete="off"
+                    >
+                  </label>
+                </div>
+
+                <div>
+                  <label for="email">
+                    <input
+                     class="booking__input"
+                     type="email"
+                     placeholder="email"
+                     id="email"
+                     name="email"
+                     maxlength="20"
+                     autocomplete="off"
+                    >
+                  </label>
+                </div>
+
+                <div>
+                  <label for="tel">
+                    <input
+                      class="booking__input"
+                      type="tel"
+                      placeholder="phone"
+                      id="tel"
+                      name="tel"
+                      autocomplete="off"
+                    >
+                  </label>
+                </div>
+
+                <div>
+                  <label for="people">
+                    <select
+                      class="booking__input booking__select"
+                      id="people"
+                      name="people"
+                    >
+                      <option selected="true" disabled="disabled">People</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="2">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div>
+                  <label for="date">
+                    <input
+                      class="booking__input"
+                      type="text"
+                      placeholder="date (mm/dd)"
+                      id="date"
+                      name="date"
+                      onfocus="(this.type='date')"
+                      onblur="(this.type='text')"
+                    >
+                  </label>
+                </div>
+
+                <div>
+                  <label for="time">
+                    <select
+                      class="booking__input booking__select"
+                      id="time"
+                      name="time"
+                    >
+                      <option selected="true" disabled="disabled">Time</option>
+                      <option value="16:00">16:00</option>
+                      <option value="17:00">17:00</option>
+                      <option value="18:00">18:00</option>
+                      <option value="19:00">19:00</option>
+                      <option value="20:00">20:00</option>
+                      <option value="21:00">21:00</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+
+              <button
+                class="booking__button button button--wide"
+              >
+                book now
+              </button>
+            </form>
+          </div>
+
+          <div class="booking__img-wrapper">
+            <img
+              src="images/about-img.png"
+              class="booking__img"
+              alt="beautiful old clock"
+            >
+          </div>
+        </div>
+
+        <p class="booking__footer" id="contact">
+          Mon - Fri: <strong>8PM - </strong>
+          , Sat - Sun: <strong>8PM - 3AM</strong>
+          , Phone: <a href="tel:+40 729 131 637" class="booking__tel">+40 729 131 637</a>
+          /<a href="tel:+40 726 458 782" class="booking__tel">+40 726 458 782</a>
+        </p>
+      </section>
+
+      <section class="specialties" id="specialties">
+        <h2 class="specialties__title">specialties</h2>
+
+        <div class="slider">
+          <div class="specialties__card slider__item">
+            <div class="specialties__img-wrapper">
+              <img
+                src="images/food.png"
+                class="specialties__img"
+                alt="something delicious"
+              >
+            </div>
+
+            <div class="specialties__card-body">
+              <h3 class="specialties__card-title">chocolate pancakes 1</h3>
+              <p class="specialties__card-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
+              <br>
+              <p class="specialties__card-text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+            </div>
+          </div>
+
+          <div class="specialties__card slider__item slider__item--block">
+            <div class="specialties__img-wrapper">
+              <img
+                src="images/food.png"
+                class="specialties__img"
+                alt="something delicious"
+              >
+            </div>
+
+            <div class="specialties__card-body">
+              <h3 class="specialties__card-title">chocolate pancakes</h3>
+              <p class="specialties__card-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
+              <br>
+              <p class="specialties__card-text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+            </div>
+          </div>
+
+          <div class="specialties__card slider__item">
+            <div class="specialties__img-wrapper">
+              <img
+                src="images/food.png"
+                class="specialties__img"
+                alt="something delicious"
+              >
+            </div>
+
+            <div class="specialties__card-body">
+              <h3 class="specialties__card-title">chocolate pancakes 2</h3>
+              <p class="specialties__card-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
+              <br>
+              <p class="specialties__card-text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+            </div>
+          </div>
+          <div class="slider__points">
+            <span class="slider__point"></span>
+            <span class="slider__point slider__point--block"></span>
+            <span class="slider__point"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <h2 class="menu__title">DELICIOUS MENU</h2>
+        <h3 class="menu__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</h3>
+
+        <nav class="menu__items">
+          <a class="menu__item">SOUPE</a>
+          <a class="menu__item">PIZZA</a>
+          <a class="menu__item">PASTA</a>
+          <a class="menu__item">DESERT</a>
+          <a class="menu__item">WINE</a>
+          <a class="menu__item">BEER</a>
+          <a class="menu__item">DRINKS</a>
+        </nav>
+
+        <div class="menu__meals">
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">55,68 USD</span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+          <div class="menu__meal">
+            <h4 class="menu__meal-title">
+              PIZZA QUATRO STAGIONI . . . .
+              <span class="menu__meal-price">
+                55,68 USD
+              </span>
+            </h4>
+            <p class="menu__meal-description">
+              Integer ullamcorper neque eu purus euismod
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="events" id="events">
+        <h2 class="events__title">Private events</h2>
+        <div class="events__main">
+          <div class="events__event events__event--left">
+            <img
+              class="events__img"
+              src="images/wedding-rings.png"
+              alt="wedding rings"
+            >
+            <h3 class="events__subtitle">weddings</h3>
+          </div>
+          <div class="events__event events__event--right">
+            <h3 class="events__subtitle events__subtitle--right">corporate parties</h3>
+            <img
+              class="events__img"
+              src="images/party.png"
+              alt="party glasses"
+            >
+          </div>
+        </div>
+        <p class="events__footer">
+          For private events please call: <a href="tel:+40 729 131 637" class="events__tel">+40 729 131 637</a>
+          /<a href="tel:+40 726 458 782" class="events__tel">+40 726 458 782</a> or use the contact form.
+        </p>
+      </section>
+    </main>
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>
