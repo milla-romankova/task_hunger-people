@@ -4,7 +4,7 @@ Stack: HTML, SCSS, JS
 
 JS was used for slider, timer.
 
-[Demo](https://milla-romankova.github.io/task_hunger-people/)
+[Demo](https://milla-romankova.github.io/task_hunger-people/index.html)
 
 [Figma](https://www.figma.com/file/BWy2TFoZrmkXNRLViZ0MYA/Hunger---Website-Template-(Copy)?node-id=38305%3A10)
 
