@@ -3,7 +3,7 @@
   &__top {
     display: flex;
     gap: 20px;
-    padding-left: 9vw;
+    margin-left: 9vw;
 
     @media(max-width: 1200px) {
       gap: 3vw;
@@ -11,7 +11,7 @@
 
     @media(max-width: 950px) {
       flex-direction: column;
-      padding-left: 0;
+      margin-left: 0;
     }
   }
 
