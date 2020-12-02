@@ -4,7 +4,7 @@ const days = document.getElementById('days');
 const hours = document.getElementById('hours');
 const minutes = document.getElementById('minutes');
 
-const newTime = new Date(`December 1 2020 19:00:00`);
+const newTime = new Date(`December 15 2020 19:00:00`);
 
 function updateCountdown() {
   const currentTime = new Date();
